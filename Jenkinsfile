@@ -4,7 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
-    DOCKERHUB_CREDENTIALS = credentials('Meghana')
+    DOCKERHUB_CREDENTIALS = credentials('docker')
   }
   stages {
     stage('Build docker image') {
@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Run container') {
       steps {
-        sh 'docker container run -dt --name app6 -P chandameghanashaly/javacal-app'
+        sh 'docker container run -dt --name app7 -P chandameghanashaly/javacal-app'
       }
     }
     stage('Login') {
