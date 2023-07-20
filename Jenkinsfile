@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Run container') {
       steps {
-        sh 'docker container run -dt --name app2 -P chandameghanashaly/javacal-app'
+        sh 'docker container run -dt --name app3 -P chandameghanashaly/javacal-app'
       }
     }
     stage('Login') {
