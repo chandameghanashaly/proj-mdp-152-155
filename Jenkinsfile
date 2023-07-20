@@ -14,7 +14,12 @@ pipeline {
     }
     stage('Run container') {
       steps {
-        sh 'docker container run -dt --name app8 -P chandameghanashaly/cal-app'
+        sh 'docker container run -dt --name app9 -P chandameghanashaly/cal-app'
+      }
+    }
+    stage('Show container list') {
+      steps {
+        sh 'docker container ls'
       }
     }
     stage('Login') {
