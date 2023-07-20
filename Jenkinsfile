@@ -9,12 +9,12 @@ pipeline {
   stages {
     stage('Build docker image') {
       steps {
-        sh 'docker build -t chandameghanashaly/javacal-app .'
+        sh 'docker build -t chandameghanashaly/cal-app .'
       }
     }
     stage('Run container') {
       steps {
-        sh 'docker container run -dt --name app7 -P chandameghanashaly/javacal-app'
+        sh 'docker container run -dt --name app8 -P chandameghanashaly/cal-app'
       }
     }
     stage('Login') {
@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push chandameghanashaly/javacal-app'
+        sh 'docker push chandameghanashaly/cal-app'
       }
     }
   }
