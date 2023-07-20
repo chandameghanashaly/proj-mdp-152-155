@@ -12,11 +12,6 @@ pipeline {
         sh 'docker build -t chandameghanashaly/javacal-app .'
       }
     }
-    stage('Remove existing container') {
-      steps {
-        sh 'docker container rm -f app'
-      }
-    }
     stage('Run container') {
       steps {
         sh 'docker container run -dt --name app -P chandameghanashaly/javacal-app'
