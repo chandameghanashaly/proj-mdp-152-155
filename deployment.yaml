@@ -14,7 +14,7 @@ spec:
     spec: 
      containers:
      - name: calc
-       image: chandameghanshaly/cal-app:latest
+       image: chandameghanashaly/cal-app:latest
        imagePullPolicy: Always
        ports:
         - containerPort: 8080
